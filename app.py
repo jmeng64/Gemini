@@ -1,8 +1,9 @@
 ## invoice extractor 
 
-from dotenv import load_dotenv 
+# comment out for streamlit cloud run. 
+#from dotenv import load_dotenv 
 
-load_dotenv() 
+#load_dotenv() 
 
 
 import streamlit as st 
