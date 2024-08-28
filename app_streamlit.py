@@ -4,8 +4,8 @@
 #from dotenv import load_dotenv 
 
 #load_dotenv() 
-%pip install google-generativeai
-%pip install streamlit
+#%pip install google-generativeai
+#%pip install streamlit
 
 import streamlit as st 
 import os 
