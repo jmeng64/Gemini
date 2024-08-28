@@ -20,7 +20,12 @@ genai.configure(api_key = os.getenv("GOOGLE_API_KEY"))
 
 def get_gemini_response(input, image, prompt): 
     ## loading the model 
-    model = genai.GenerativeModel('gemini-pro-vision')
+    
+    # from streamlit cloud: 
+    #NotFound: 404 Gemini 1.0 Pro Vision has been deprecated on July 12, 2024. 
+    #Consider switching to different model, for example gemini-1.5-flash.
+    #model = genai.GenerativeModel('gemini-pro-vision')
+    model = genai.GenerativeModel('gemini-1.5-flash')
     response = model.generate_content([input, image[0], prompt])
     return response.text 
 
