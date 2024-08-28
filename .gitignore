@@ -1,3 +1,4 @@
-eve_gemini
-.eve
-.data
+env_gemini
+.env
+data
+play.ipynb
