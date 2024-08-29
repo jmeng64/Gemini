@@ -43,12 +43,13 @@ def input_image_setup(uploaded_file):
 
 ##  initialize streamlit app 
 
-st.set_page_config(page_title="Gemini Invoice Extractor")
+st.set_page_config(page_title="Gemini Image Recognition")
 
-st.header("Gemini Application")
+st.header("Gemini Image REcognition")
 
-input=st.text_input("Input Prompt: ", key="input")
 uploaded_file = st.file_uploader("Choose an image ... ", type=["jpg", "jpeg", "png"])
+input=st.text_input("Input Prompt: ", key="input")
+
 image="" 
 
 if uploaded_file is not None: 
@@ -56,7 +57,7 @@ if uploaded_file is not None:
     st.image(image, caption="Uploaded Image.", use_column_width=True)
 
 
-submit = st.button("Tell me about the invoice")
+submit = st.button("Tell me about the image")
 
 input_prompt = """
 You are an expert in recognizing objects in an image. 
