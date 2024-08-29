@@ -47,7 +47,7 @@ st.set_page_config(page_title="Gemini Image Recognition")
 
 st.header("Gemini Image REcognition")
 
-uploaded_file = st.file_uploader("Choose an image ... ", type=["jpg", "jpeg", "png"])
+uploaded_file = st.file_uploader("Choose an image ... ", type=["jpg", "jpeg", "png", "avif", "webp"])
 input=st.text_input("Input Prompt: ", key="input")
 
 image="" 
