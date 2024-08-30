@@ -1,3 +1,11 @@
+## invoice extractor 
+
+# comment out for streamlit cloud run. 
+#from dotenv import load_dotenv 
+
+#load_dotenv() 
+#%pip install google-generativeai
+#%pip install streamlit
 
 import streamlit as st 
 import os 
@@ -35,12 +43,12 @@ def input_image_setup(uploaded_file):
 
 ##  initialize streamlit app 
 
-st.set_page_config(page_title="Gemini Image Recognition")
+st.set_page_config(page_title="Gemini Invoice Extractor")
 
-st.header("Gemini Image Recognition")
+st.header("Gemini Application")
 
 input=st.text_input("Input Prompt: ", key="input")
-uploaded_file = st.file_uploader("Choose an image ... ", type=["jpg", "jpeg", "png", "webp"] )
+uploaded_file = st.file_uploader("Choose an image ... ", type=["jpg", "jpeg", "png"])
 image="" 
 
 if uploaded_file is not None: 
@@ -48,7 +56,7 @@ if uploaded_file is not None:
     st.image(image, caption="Uploaded Image.", use_column_width=True)
 
 
-submit = st.button("Get response.")
+submit = st.button("Tell me about the invoice")
 
 input_prompt = """
 You are an expert in understanding invoices. 
