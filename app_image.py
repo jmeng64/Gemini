@@ -57,7 +57,7 @@ if uploaded_file is not None:
     st.image(image, caption="Uploaded Image.", use_column_width=True)
 
 
-input=st.text_input("Anything you want to know about this image? ", key="input")
+input=st.text_input("Tell me anything you want to know about this image.", key="input")
 
 submit = st.button("Click the button to proceed")
 
